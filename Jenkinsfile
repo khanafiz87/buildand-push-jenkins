@@ -1,6 +1,6 @@
 node {
 
-   def registryProjet='formation/'
+   def registryProjet='khanafiz87/'
    def IMAGE="${registryProjet}app:3.8"
 
     stage('Clone') {
@@ -18,7 +18,7 @@ node {
     }
 
     stage('Push') {
-       docker.withRegistry('https://registry.hub.docker.com' , 'harbor_id') {
+       docker.withRegistry('https://registry.hub.docker.com' , 'docker_id') {
               img.push 'latest'
               img.push()
           }
